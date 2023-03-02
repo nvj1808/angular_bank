@@ -1,0 +1,32 @@
+
+<div class="container w-50 rounded text-center p-5 mt-5" style="background-color: rgba(0, 0, 0, 0.622);">
+    <h1>Sign in your Account</h1>
+    <form [formGroup]=" registerForm" action="">
+        <div class="p-3 mt-2">
+            <input formControlName="uname" id="unamid" name="usern1" class="form-control" type="text"
+             placeholder="Enter the username ">
+        </div>
+        <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched">
+            <p class="text-danger">Must contain charactors</p>
+        </div>
+        <div class="p-3 mt-2">
+            <input formControlName="acno"   id="acid" name="acnum1" class="form-control" type="text"
+             placeholder="Enter acno">
+        </div>
+
+        <div *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched">
+            <p class="text-danger ">acccept only numbers</p>
+        </div>
+
+        <div class="p-3 mt-2">
+            <input formControlName="psw"  id="psw1" name="paswrd1" class="form-control" type="password" 
+            placeholder="Enter  the password">
+        </div>
+        <div *ngIf="this.registerForm.get('psw')?.errors && this.registerForm.get('psw')?.touched">
+            <p class="text-danger ">acccept only numbers and characters</p>
+        </div>
+        <div class="p-3 mt-2">
+            <button  type="button" (click)="register()" class="btn btn-outline-light">Register</button>
+        </div>
+    </form>
+</div>

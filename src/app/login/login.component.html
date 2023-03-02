@@ -1,0 +1,26 @@
+
+
+<div class="container w-50 rounded text-center p-5 mt-5" style="background-color: rgba(0, 0, 0, 0.622);">
+    <h1>Sign in your Account</h1>
+    <form action="" [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="p-3 mt-2">
+            <input formControlName="acno" id="acid" name="acnum1" class="form-control" type="text" placeholder="inputplaceholder">
+        </div>
+        <div class="p-3 mt-2">
+            <input  formControlName="psw"  id="psw1" name="paswrd1" class="form-control" type="password" placeholder="Enter  the password">
+        </div>
+        
+        <div class="p-3 mt-2">
+            <button  type="submit"  class="btn btn-outline-light">login</button>
+        </div>
+       
+<div class="text-center text-white">
+    <strong>Not register ?</strong> 
+    <a style="text-decoration: none; color: brown;" routerLink="register">
+       <strong> Register</strong>
+    </a>
+  
+
+</div>
+    </form>
+</div>
